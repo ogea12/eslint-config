@@ -1,0 +1,7 @@
+{
+  "extends": "@ogea12/tsconfig/tsconfig.package",
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "./build"
+  }
+}

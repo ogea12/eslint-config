@@ -1,0 +1,71 @@
+import type { ConfigWithExtends } from 'typescript-eslint'
+
+/** ESLint configuration object for JavaScript's rules. */
+const config: ConfigWithExtends = {
+  name: 'JavaScript',
+  languageOptions: {
+    ecmaVersion: 2022,
+    sourceType: 'module',
+    parserOptions: {
+      ecmaFeatures: { jsx: true },
+      ecmaVersion: 2022,
+      sourceType: 'module',
+    },
+  },
+  linterOptions: { reportUnusedDisableDirectives: true },
+  rules: {
+    'capitalized-comments': [
+      'warn',
+      'always',
+      {
+        line: {
+          ignorePattern: '.*',
+          ignoreInlineComments: true,
+          ignoreConsecutiveComments: true,
+        },
+      },
+    ],
+    'curly': ['error', 'all'],
+    'eqeqeq': 'error',
+    'for-direction': 'error',
+    'getter-return': 'error',
+    'no-array-constructor': 'error',
+    'no-caller': 'error',
+    'no-compare-neg-zero': 'error',
+    'no-cond-assign': ['error', 'always'],
+    'no-const-assign': 'error',
+    'no-constant-binary-expression': 'warn',
+    'no-constant-condition': 'warn',
+    'no-control-regex': 'error',
+    'no-debugger': 'error',
+    'no-duplicate-case': 'error',
+    'no-else-return': 'error',
+    'no-eval': 'error',
+    'no-ex-assign': 'error',
+    'no-extra-boolean-cast': 'error',
+    'no-fallthrough': 'error',
+    'no-import-assign': 'error',
+    'no-inner-declarations': 'error',
+    'no-invalid-regexp': ['error', { allowConstructorFlags: ['u', 'y'] }],
+    'no-new-wrappers': 'error',
+    'no-proto': 'error',
+    'no-regex-spaces': 'error',
+    'no-self-assign': 'error',
+    'no-self-compare': 'error',
+    'no-sparse-arrays': 'error',
+    'no-this-before-super': 'error',
+    'no-undef-init': 'error',
+    'no-unreachable': 'error',
+    'no-unsafe-finally': 'error',
+    'no-unsafe-negation': 'error',
+    'no-unused-vars': 'warn',
+    'no-with': 'error',
+    'object-shorthand': ['error', 'always', { avoidQuotes: true, ignoreConstructors: false }],
+    'one-var': ['error', 'never'],
+    'prefer-const': 'error',
+    'use-isnan': 'error',
+    'yoda': 'error',
+  },
+}
+
+export default config

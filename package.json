@@ -1,0 +1,91 @@
+{
+  "name": "@ogea12/eslint-config",
+  "description": "Config' ESLint appliquée dans les projets de l'OGEA 12",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=20.17.0"
+  },
+  "type": "module",
+  "files": [
+    "build/src",
+    "build/index.js",
+    "build/index.d.ts"
+  ],
+  "exports": {
+    ".": {
+      "import": "./build/index.js",
+      "types": "./build/index.d.ts"
+    },
+    "./configs/*": {
+      "import": "./build/src/configs/*.js",
+      "types": "./build/src/configs/*.d.ts"
+    }
+  },
+  "scripts": {
+    "clean": "del-cli build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "compile": "npm run clean && tsc",
+    "prebuild": "npm run format && npm run lint:fix",
+    "build": "npm run compile",
+    "prepublishOnly": "npm run build",
+    "release": "npx release-it"
+  },
+  "homepage": "https://github.com/ogea12/eslint-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogea12/eslint-config.git"
+  },
+  "devDependencies": {
+    "@ogea12/prettier-config": "^1.0.1",
+    "@ogea12/tsconfig": "^1.0.1",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint-plugin-tailwindcss": "^3.17.0",
+    "@types/node": "^22.10.2",
+    "del-cli": "^6.0.0",
+    "prettier": "^3.4.2",
+    "release-it": "^17.11.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@adonisjs/eslint-plugin": "^2.0.0-beta.5",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsdoc": "^50.6.1",
+    "eslint-plugin-n": "^17.15.1",
+    "eslint-plugin-perfectionist": "^4.4.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-tailwindcss": "^3.17.5",
+    "eslint-plugin-unicorn": "^56.0.1",
+    "eslint-plugin-yml": "^1.16.0",
+    "local-pkg": "^0.5.1",
+    "typescript-eslint": "^8.18.1"
+  },
+  "peerDependencies": {
+    "eslint": "^9.17.0"
+  },
+  "author": "OGEA 12",
+  "license": "MIT",
+  "keywords": [
+    "ogea12",
+    "eslint"
+  ],
+  "prettier": "@ogea12/prettier-config",
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore(release): ${version}",
+      "tagAnnotation": "v${version}",
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "releaseName": "v${version}",
+      "web": true
+    }
+  }
+}
