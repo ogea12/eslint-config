@@ -1,7 +1,7 @@
 {
   "name": "@ogea12/eslint-config",
   "description": "Config' ESLint appliquée dans les projets de l'OGEA 12",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "node": ">=20.17.0"
   },
