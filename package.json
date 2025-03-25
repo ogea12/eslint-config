@@ -7,18 +7,13 @@
   },
   "type": "module",
   "files": [
-    "build/src",
-    "build/index.js",
-    "build/index.d.ts"
+    "build"
   ],
   "exports": {
     ".": {
+      "types": "./build/index.d.ts",
       "import": "./build/index.js",
-      "types": "./build/index.d.ts"
-    },
-    "./configs/*": {
-      "import": "./build/src/configs/*.js",
-      "types": "./build/src/configs/*.d.ts"
+      "require": "./build/index.cjs"
     }
   },
   "scripts": {
@@ -27,9 +22,8 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
-    "compile": "npm run clean && tsc",
     "prebuild": "npm run format && npm run lint:fix",
-    "build": "npm run compile",
+    "build": "tsup",
     "prepublishOnly": "npm run build",
     "release": "npx release-it"
   },
@@ -44,9 +38,9 @@
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint-plugin-tailwindcss": "^3.17.0",
     "@types/node": "^22.13.10",
-    "del-cli": "^6.0.0",
     "prettier": "^3.5.3",
     "release-it": "^18.1.2",
+    "tsup": "^8.4.0",
     "typescript": "^5.8.2"
   },
   "dependencies": {
