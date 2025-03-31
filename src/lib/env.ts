@@ -9,10 +9,13 @@ const hasTypeScript = isPackageExists('typescript')
 /** Checks if `tailwindcss` package is installed. */
 const hasTailwindCSS = isPackageExists('tailwindcss')
 
+/** Checks if `unocss` package is installed. */
+const hasUnoCSS = isPackageExists('unocss')
+
 /** Checks if `storybook` package is installed. */
 const hasStorybook = isPackageExists('storybook')
 
 /** Checks if `@adonisjs/core` package is installed. */
 const hasAdonisJS = isPackageExists('@adonisjs/core')
 
-export { hasAdonisJS, hasPrettier, hasStorybook, hasTailwindCSS, hasTypeScript }
+export { hasAdonisJS, hasPrettier, hasStorybook, hasTailwindCSS, hasTypeScript, hasUnoCSS }
