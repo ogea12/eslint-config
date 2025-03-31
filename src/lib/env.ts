@@ -1,21 +1,21 @@
-import { isPackageExists } from 'local-pkg'
+import { isPackageListedSync } from 'local-pkg'
 
 /** Checks if `prettier` package is installed. */
-const hasPrettier = isPackageExists('prettier')
+const hasPrettier = isPackageListedSync('prettier')
 
 /** Checks if `typescript` package is installed. */
-const hasTypeScript = isPackageExists('typescript')
+const hasTypeScript = isPackageListedSync('typescript')
 
 /** Checks if `tailwindcss` package is installed. */
-const hasTailwindCSS = isPackageExists('tailwindcss')
+const hasTailwindCSS = isPackageListedSync('tailwindcss')
 
 /** Checks if `unocss` package is installed. */
-const hasUnoCSS = isPackageExists('unocss')
+const hasUnoCSS = isPackageListedSync('unocss')
 
 /** Checks if `storybook` package is installed. */
-const hasStorybook = isPackageExists('storybook')
+const hasStorybook = isPackageListedSync('storybook')
 
 /** Checks if `@adonisjs/core` package is installed. */
-const hasAdonisJS = isPackageExists('@adonisjs/core')
+const hasAdonisJS = isPackageListedSync('@adonisjs/core')
 
 export { hasAdonisJS, hasPrettier, hasStorybook, hasTailwindCSS, hasTypeScript, hasUnoCSS }
