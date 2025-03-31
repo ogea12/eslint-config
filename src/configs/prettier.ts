@@ -5,7 +5,7 @@ import pluginPrettier from 'eslint-plugin-prettier/recommended'
 
 /** ESLint configuration object for Prettier's rules. */
 const config: ConfigWithExtends = {
-  name: 'Prettier',
+  name: 'ogea12:prettier',
   plugins: { ...pluginPrettier.plugins },
   rules: {
     ...configPrettier.rules,

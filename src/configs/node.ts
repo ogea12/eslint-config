@@ -4,7 +4,7 @@ import pluginNode from 'eslint-plugin-n'
 
 /** ESLint configuration object for Node's rules. */
 const config: ConfigWithExtends = {
-  name: 'Node',
+  name: 'ogea12:node',
   plugins: { node: pluginNode },
   rules: {
     'node/handle-callback-err': ['error', '^(err|error)$'],

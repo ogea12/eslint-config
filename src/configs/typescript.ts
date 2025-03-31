@@ -4,7 +4,7 @@ import flattenArray from '../lib/flatten_array.js'
 
 /** ESLint configuration object for TypeScript's rules. */
 const config = flattenArray(tseslint.configs['strict'])
-config.name = 'TypeScript' // Override the configuration name
+config.name = 'ogea12:typescript' // Override the configuration name
 config.rules = {
   ...config.rules,
   '@typescript-eslint/consistent-type-imports': [

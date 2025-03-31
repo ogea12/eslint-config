@@ -2,7 +2,7 @@ import type { ConfigWithExtends } from 'typescript-eslint'
 
 /** ESLint configuration object for JavaScript's rules. */
 const config: ConfigWithExtends = {
-  name: 'JavaScript',
+  name: 'ogea12:javascript',
   languageOptions: {
     ecmaVersion: 2022,
     sourceType: 'module',

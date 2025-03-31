@@ -4,7 +4,7 @@ import pluginPerfectionist from 'eslint-plugin-perfectionist'
 
 /** ESLint configuration object for Perfectionist's rules. */
 const config: ConfigWithExtends = {
-  name: 'Perfectionist',
+  name: 'ogea12:perfectionist',
   plugins: { perfectionist: pluginPerfectionist },
   rules: {
     'perfectionist/sort-imports': [

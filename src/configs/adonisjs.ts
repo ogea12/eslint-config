@@ -4,7 +4,7 @@ import pluginAdonisJS from '@adonisjs/eslint-plugin'
 
 /** ESLint configuration object for AdonisJS's rules. */
 const config: ConfigWithExtends = {
-  name: 'AdonisJS',
+  name: 'ogea12:adonisjs',
   plugins: { '@adonisjs': pluginAdonisJS },
   rules: {
     '@adonisjs/prefer-lazy-controller-import': 'error',

@@ -6,7 +6,7 @@ import { hasTypeScript } from '../lib/env.js'
 
 /** ESLint configuration object for JSDoc's rules. */
 const config: ConfigWithExtends = {
-  name: 'JSDoc (for TypeScript)',
+  name: 'ogea12:jsdoc',
   plugins: { jsdoc: pluginJSDoc },
   rules: {
     'jsdoc/check-access': 'warn',
@@ -32,7 +32,6 @@ const config: ConfigWithExtends = {
 }
 
 if (!hasTypeScript) {
-  config.name = 'JSDoc (for JavaScript)'
   config.rules = {
     ...config.rules,
     'jsdoc/require-returns': 'warn',

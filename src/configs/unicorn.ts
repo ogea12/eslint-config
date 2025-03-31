@@ -4,7 +4,7 @@ import pluginUnicorn from 'eslint-plugin-unicorn'
 
 /** ESLint configuration object for Unicorn's rules. */
 const config: ConfigWithExtends = {
-  name: 'Unicorn',
+  name: 'ogea12:unicorn',
   plugins: { unicorn: pluginUnicorn },
   rules: {
     'unicorn/prefer-module': 'error',
