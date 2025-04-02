@@ -17,7 +17,6 @@
     }
   },
   "scripts": {
-    "clean": "del-cli build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
