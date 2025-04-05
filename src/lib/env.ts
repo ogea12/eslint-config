@@ -6,9 +6,6 @@ const hasPrettier = isPackageListedSync('prettier')
 /** Checks if `typescript` package is installed. */
 const hasTypeScript = isPackageListedSync('typescript')
 
-/** Checks if `tailwindcss` package is installed. */
-const hasTailwindCSS = isPackageListedSync('tailwindcss')
-
 /** Checks if `unocss` package is installed. */
 const hasUnoCSS = isPackageListedSync('unocss')
 
@@ -18,4 +15,4 @@ const hasStorybook = isPackageListedSync('storybook')
 /** Checks if `@adonisjs/core` package is installed. */
 const hasAdonisJS = isPackageListedSync('@adonisjs/core')
 
-export { hasAdonisJS, hasPrettier, hasStorybook, hasTailwindCSS, hasTypeScript, hasUnoCSS }
+export { hasAdonisJS, hasPrettier, hasStorybook, hasTypeScript, hasUnoCSS }

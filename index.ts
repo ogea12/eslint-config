@@ -10,18 +10,10 @@ import configNode from './src/configs/node.js'
 import configPerfectionist from './src/configs/perfectionist.js'
 import configPrettier from './src/configs/prettier.js'
 import configStorybook from './src/configs/storybook.js'
-import configTailwindCSS from './src/configs/tailwindcss.js'
 import configTypeScript from './src/configs/typescript.js'
 import configUnicorn from './src/configs/unicorn.js'
 import configUnoCSS from './src/configs/unocss.js'
-import {
-  hasAdonisJS,
-  hasPrettier,
-  hasStorybook,
-  hasTailwindCSS,
-  hasTypeScript,
-  hasUnoCSS,
-} from './src/lib/env.js'
+import { hasAdonisJS, hasPrettier, hasStorybook, hasTypeScript, hasUnoCSS } from './src/lib/env.js'
 
 export function configure(...configsToMerge: ConfigWithExtends[]) {
   // Check if TypeScript's configuration should be enabled
@@ -29,12 +21,7 @@ export function configure(...configsToMerge: ConfigWithExtends[]) {
     configsToMerge.push(configTypeScript)
   }
 
-  // Check if Tailwind CSS's configuration should be enabled
-  if (hasTailwindCSS) {
-    configsToMerge.push(configTailwindCSS)
-  }
-
-  // Check if Uno CSS's configuration should be enabled
+  // Check if UnoCSS's configuration should be enabled
   if (hasUnoCSS) {
     configsToMerge.push(configUnoCSS)
   }
