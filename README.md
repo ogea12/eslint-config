@@ -1,4 +1,6 @@
-# @ogea12/eslint-config
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/b11acec7-07f1-4c72-8eac-6a88d7e52c5e" />
+</div>
 
 <div align="center">
 
