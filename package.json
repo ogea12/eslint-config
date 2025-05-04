@@ -25,7 +25,8 @@
     "build": "tsup",
     "postbuild": "del-cli build/**/*.d.cts",
     "prepublishOnly": "npm run build",
-    "release": "npx release-it"
+    "release": "npx release-it",
+    "taze": "npx taze -I"
   },
   "homepage": "https://github.com/ogea12/eslint-config#readme",
   "repository": {
@@ -40,6 +41,7 @@
     "del-cli": "^6.0.0",
     "prettier": "^3.5.3",
     "release-it": "^18.1.2",
+    "taze": "^19.0.4",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3"
   },
