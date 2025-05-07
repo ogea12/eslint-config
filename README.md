@@ -18,7 +18,7 @@
 
 Pour utiliser le package, vous devez d'abord l'intégrer dans votre projet.
 
-```shell
+```bash
 npm install -D @ogea12/eslint-config
 
 # Assurez-vous également d'installer le package suivant
