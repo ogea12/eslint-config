@@ -7,7 +7,7 @@ const config: ConfigWithExtends = {
   name: 'ogea12:unocss',
   plugins: { unocss: pluginUnoCSS },
   rules: {
-    'unocss/order': ['warn', { unoFunctions: ['classnames', 'clsx', 'ctl', 'cva', 'cx'] }],
+    'unocss/order': ['warn', { unoFunctions: ['classnames', 'clsx', 'ctl', 'cva', 'cx', 'tv'] }],
     'unocss/order-attributify': 'warn',
   },
 }
